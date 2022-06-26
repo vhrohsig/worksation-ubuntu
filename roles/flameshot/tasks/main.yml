@@ -1,0 +1,7 @@
+---
+- name: Install
+  become: true
+  apt:
+    state: latest
+    name:
+      - flameshot

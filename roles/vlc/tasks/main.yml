@@ -1,0 +1,16 @@
+---
+- name: Install
+  become: true
+  apt:
+    state: latest
+    name:
+      - vlc
+
+- name: Install plugins
+  become: true
+  apt:
+    state: latest
+    name:
+      - vlc-plugin-access-extra
+      - libbluray-bdj
+      - libdvdcss2

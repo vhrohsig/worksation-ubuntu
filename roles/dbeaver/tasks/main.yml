@@ -1,0 +1,20 @@
+---
+- name: Install key
+  become: true
+  apt_key:
+    url: https://dbeaver.io/debs/dbeaver.gpg.key
+    state: present
+
+- name: Install repo
+  become: true
+  apt_repository:
+    repo: deb https://dbeaver.io/debs/dbeaver-ce /
+    filename: docker
+    state: present
+
+- name: Install
+  become: true
+  apt:
+    name: dbeaver-ce
+    state: latest
+    update_cache: true

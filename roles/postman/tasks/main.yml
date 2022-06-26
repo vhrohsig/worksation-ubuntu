@@ -1,0 +1,6 @@
+---
+- name: Install
+  become: true
+  snap:
+    name: postman
+    classic: yes

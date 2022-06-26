@@ -1,0 +1,22 @@
+#!/usr/bin/env ansible-playbook
+---
+- name: Setup workstation
+  hosts: localhost
+  become: false
+
+  roles:
+    - role: update
+    - role: git
+    - role: jdk
+    - role: vscode
+    - role: spotify
+    - role: chrome
+    - role: docker
+    - role: docker-compose
+    - role: aws-cli
+    - role: dbeaver
+    - role: vlc
+    - role: discord
+    - role: postman
+    - role: flameshot
+    - role: meld
